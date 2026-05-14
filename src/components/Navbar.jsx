@@ -5,7 +5,7 @@ import { getUserRole } from "../utils/getUserRole";
 import { IoSearchOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import { AuthContext } from "../context/authContext";
+import { AuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
 
 function Navbar({ search, setSearch, cart }) {

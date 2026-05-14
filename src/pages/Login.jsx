@@ -3,7 +3,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { loginApi } from "../api/authApi";
-import { AuthContext } from "../context/authContext";
+import { AuthContext } from "../context/AuthContext";
 const API_URL = import.meta.env.VITE_API_URL;
 
 const Login = ({Loading}) => {
