@@ -133,7 +133,7 @@ function Navbar({ search, setSearch, cart }) {
         {/* Right */}
         <div className="w-1/3 flex justify-end gap-4 md:pr-16">
           {!token ? (
-            <>
+            <div className="md:flex hidden">
               <Link
                 to={"/login"}
                 className="bg-white text-amber-600 px-3 py-2 font-semibold rounded-lg shadow-md hover:bg-amber-600 hover:text-white transition duration-200 hover:border hover:border-white "
@@ -146,7 +146,7 @@ function Navbar({ search, setSearch, cart }) {
               >
                 Register
               </Link>
-            </>
+            </div>
           ) : (
             <>
               <div className="flex gap-4 justify-between items-center">
@@ -178,7 +178,7 @@ function Navbar({ search, setSearch, cart }) {
 
       <div
         className={`md:hidden overflow-hidden transition-all w-full duration-300 text-white ${
-          nav ? "max-h-100 w-full p-4 " : "max-h-0"
+          nav ? "max-h-110 w-full p-4 " : "max-h-0"
         }`}
       >
         <div className="flex flex-col w-full text-lg text-center">
@@ -239,6 +239,13 @@ function Navbar({ search, setSearch, cart }) {
             className="cursor-pointer hover:bg-white hover:text-amber-600 py-2 transition duration-100"
           >
             FAQs
+          </Link>
+          <Link
+            onClick={() => setNav(false)}
+            to={"/login"}
+            className="cursor-pointer hover:bg-white hover:text-amber-600 py-2 transition duration-100"
+          >
+            Login / Register
           </Link>
           <Link
             className="cursor-pointer hover:bg-white hover:text-amber-600 py-2 transition duration-100"
