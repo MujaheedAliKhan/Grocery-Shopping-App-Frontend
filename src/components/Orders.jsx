@@ -3,7 +3,7 @@ import { getMyOrdersApi, cancelOrderApi } from "../api/orderApi";
 import toast from "react-hot-toast";
 import Back from "./Back";
 
-const Orders = () => {
+const Orders = ({Loading}) => {
   const [orders, setOrders] = useState([]);
 
   const handleCancelOrder = async (id) => {
@@ -40,8 +40,14 @@ const Orders = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto min-h-screen md:pt-36 pt-38 p-10">
-        <div className="bg-white shadow-lg p-10 rounded-lg border border-gray-300">
+    <>
+      {Loading ? (
+      <div className="min-h-screen  flex justify-center items-center h-60">
+          <div className="w-10 h-10 border-4 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+    ) : (
+      <div className="max-w-4xl mx-auto min-h-screen md:pt-36 pt-38 p-10">
+      <div className="bg-white shadow-lg p-10 rounded-lg border border-gray-300">
           <Back/>
           <h1 className="text-3xl text-center text-gray-600 font-bold mb-6">
         My Orders
@@ -104,6 +110,8 @@ const Orders = () => {
       )}
         </div>
     </div>
+    )}
+    </>
   );
 };
 

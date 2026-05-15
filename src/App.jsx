@@ -177,7 +177,7 @@ function App() {
               } Loading={Loading} />
               <Route path="/orders" element={
               <ProtectedRoute>
-                <Orders />
+                <Orders Loading={Loading} />
               </ProtectedRoute>
               } Loading={Loading} />
 

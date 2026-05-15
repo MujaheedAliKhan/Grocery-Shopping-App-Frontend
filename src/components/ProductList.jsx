@@ -73,7 +73,7 @@ const ProductList = ({
       </div>
 
       {/* Products Card */}
-      <div className="p-10 grid grid-cols-2 md:grid-cols-6 gap-6 ">
+      <div className="p-4 md:p-10 grid grid-cols-2 md:grid-cols-6 gap-6 ">
         {Loading 
         ? Array(12)
         .fill(0)

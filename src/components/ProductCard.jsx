@@ -34,9 +34,9 @@ const ProductCard = ({ product, deleteProduct, setEditProduct, addToCart, setCar
     navigate("/cart");
   }
   return (
-    <div>
+   
       <div
-        className="p-4 shadow-lg h-86 border border-gray-200  rounded-md flex flex-col justify-between items-center transform hover:scale-105 transition duration-200"
+        className="p-4 shadow-lg min-h-88 border border-gray-200  rounded-md flex flex-col justify-between items-center transform hover:scale-105 transition duration-200"
         key={product._id}
       >
         <div>
@@ -50,7 +50,7 @@ const ProductCard = ({ product, deleteProduct, setEditProduct, addToCart, setCar
           </div>
           {/* Info */}
           <div className="flex flex-col justify-center items-start w-full">
-            <h3 className="mt-2 font-semibold text-xl">{product.name}</h3>
+            <h3 className="mt-2 font-semibold text-xl line-clamp-2">{product.name}</h3>
             <p className="text-gray-500 text-md">{product.quantity}Kg</p>
             <p className="text-gray-600 text-lg">₹{product.price}/-</p>
           </div>
@@ -100,7 +100,7 @@ const ProductCard = ({ product, deleteProduct, setEditProduct, addToCart, setCar
           </div>
         
       </div>
-    </div>
+    
   );
 };
 

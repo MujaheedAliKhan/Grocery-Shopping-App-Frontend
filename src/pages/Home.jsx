@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="min-h-screen mx-auto grid md:grid-cols-2 pt-16 justify-center items-center">
       <div className="flex flex-col gap-10 p-10 md:p-24 justify-start items-start">
-        <h1 className="text-5xl md:text-8xl text-gray-400">Grocery Products</h1>
+        <h1 className="text-6xl md:text-8xl text-gray-400">Grocery Products</h1>
         <p className="text-md md:text-lg text-gray-600">
           Grocery products are everyday essential items sold for daily use,
           including Rice, Wheat Flour, Milk, Eggs, Fruits, Vegetables, cooking
