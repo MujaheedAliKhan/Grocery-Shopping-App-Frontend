@@ -133,7 +133,7 @@ function Navbar({ search, setSearch, cart }) {
         {/* Right */}
         <div className="w-1/3 flex justify-end gap-4 md:pr-16">
           {!token ? (
-            <div className="md:flex hidden">
+            <div className="md:flex hidden gap-4"> 
               <Link
                 to={"/login"}
                 className="bg-white text-amber-600 px-3 py-2 font-semibold rounded-lg shadow-md hover:bg-amber-600 hover:text-white transition duration-200 hover:border hover:border-white "
